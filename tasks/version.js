@@ -52,6 +52,8 @@ Elixir.extend('version', function(src, buildPath) {
 
                 // We'll also copy over relevant sourcemap files.
                 copyMaps(paths.src.path, paths.output.baseDir);
+                
+                new Elixir.Notification('Files versioned!');
             })
         );
     })
