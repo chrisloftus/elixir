@@ -44,6 +44,7 @@ Elixir.extend('version', function(src, buildPath) {
             .pipe(gulp.dest(paths.output.baseDir))
             .pipe(rev.manifest())
             .pipe(gulp.dest(paths.output.baseDir))
+            .pipe(new Elixir.Notification('Files versioned!'))
             .on('end', function() {
                 // We'll get rid of the duplicated file that
                 // usually gets put in the "build" folder,
